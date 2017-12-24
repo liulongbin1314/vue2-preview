@@ -40,7 +40,7 @@ npm i vue2-preview -S
 ### Install plugin
 
 ``` javascript
-import VuePreview from 'vue-preview'
+import VuePreview from 'vue2-preview'
 Vue.use(VuePreview)
 ```
 
