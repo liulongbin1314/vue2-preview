@@ -2,7 +2,7 @@
 
 > 一个Vue集成[PhotoSwipe](https://github.com/dimsemenov/PhotoSwipe)图片预览插件
 
->注意：此插件并没有提供新的功能，只是基于原作的基础之上，做了小小改动，从而解决了使用`webpack`打包压缩JS文件时报错的问题：``ERROR in js/vendors.js from UglifyJs; Unexpected token: name ($vm)
+>注意：此插件并没有提供新的功能，只是基于原作的基础之上，做了小小改动，从而解决了使用`webpack`打包压缩JS文件时报错的问题：`ERROR in js/vendors.js from UglifyJs; Unexpected token: name ($vm)`
 
 ![](https://img.shields.io/npm/dm/vue2-preview.svg)
 ![](https://img.shields.io/npm/v/vue2-preview.svg)
