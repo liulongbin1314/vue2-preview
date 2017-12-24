@@ -13,7 +13,7 @@
 
 ## Based on
 
-[vue-preview](github.com/LS1231/vue-preview)
+[vue-preview](https://github.com/LS1231/vue-preview)
 
 ## Installation
 
