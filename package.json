@@ -1,6 +1,6 @@
 {
   "name": "vue2-preview",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Vue2 image preview plugin based on vue-preview",
   "main": "src/plugins/preview/index.js",
   "scripts": {
