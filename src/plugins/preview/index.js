@@ -1,25 +1,25 @@
-import PreviewComponent from './preview.vue'
-var $vm = null
+import PreviewComponent from "./preview.vue";
+
+const install = (Vue, options) => {
+    if(install.installed) return;
+
+    const Preview = Vue.extend(PreviewComponent);
+    const $preview = new Preview({
+        el: document.createElement("div")
+    });
+    document.body.appendChild($preview.$el);
+    $preview.init(options);
+
+    Vue.prototype.$preview = {
+        open(index, list, params) {
+            $preview.open(index, list, params);
+        },
+        close() {
+            $preview.close();
+        }
+    };
+};
+
 export default {
-  install: function (Vue) {
-    var Preview = Vue.extend(PreviewComponent)
-    if (!$vm) {
-      $vm = new Preview({ el: document.createElement('div') })
-      document.body.appendChild($vm.$el)
-    }
-    const preview = {
-      open: function (index, list, params) {
-        $vm.open(index, list, params)
-      },
-      close: function () {
-        $vm.close()
-      }
-    }
-    Vue.$preview = preview
-    Vue.mixin({
-      created: function () {
-        this.$preview = Vue.$preview
-      }
-    })
-  }
+    install
 }
