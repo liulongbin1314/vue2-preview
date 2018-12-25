@@ -1,7 +1,7 @@
 {
   "name": "vue2-preview",
-  "version": "1.0.2",
-  "description": "A Vue2 image preview plugin based on vue-preview",
+  "version": "1.0.4",
+  "description": "A Vue2 image preview plugin",
   "main": "src/plugins/preview/index.js",
   "scripts": {
     "dev": "node build/dev-server.js",
@@ -26,7 +26,7 @@
     "url": "https://github.com/daidaitu1314/vue2-preview/issues"
   },
   "dependencies": {
-    "photoswipe": "^4.1.1"
+    "photoswipe": "^4.1.2"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
