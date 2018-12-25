@@ -35,6 +35,8 @@ Vue.use(VuePreview)
       :thumbImageStyle="{width: '80px', height: '80px', margin: '10px'}"
       :previewBoxStyle="{border: '1px solid #eee'}"
       :tapToClose="true"
+      @close="closeHandler"
+      @destroy="destroyHandler"
     />
   </div>
 </template>
@@ -56,10 +58,19 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    // 即将关闭的时候，调用这个处理函数
+    closeHandler() {
+      console.log('closeHandler')
+    },
+    // 完全关闭之后，调用这个函数清理资源
+    destroyHandler() {
+      console.log('destroyHandler')
+    }
   }
 }
 </script>
-
 ```
 
 ### 参数说明：
@@ -70,6 +81,8 @@ export default {
 | thumbImageStyle     |缩略图的样式|   Object |    否
 | previewBoxStyle     |缩略图容器的样式|   Object |    否
 | tapToClose     |是否允许单击关闭|   Boolean |    否
+| close     |监听预览窗口关闭的事件(关闭前触发)|   Function |    否
+| destroy     |监听预览窗口销毁的事件(关闭后触发)|   Function |    否
 
 ## License
 

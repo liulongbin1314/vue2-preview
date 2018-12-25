@@ -172,10 +172,23 @@ export default {
         options
       );
       gallery.init();
+
+      // 即将关闭
+      gallery.listen("close", () => {
+        this.$emit("close");
+      });
+
+      // Gallery unbinds events
+      // (triggers before closing animation)
+      gallery.listen("unbindEvents", () => {
+        // console.log('unbindEvents')
+      });
+
+      // 关闭之后清理资源
+      gallery.listen("destroy", () => {
+        this.$emit("destroy");
+      });
     }
   }
 };
 </script>
-
-<style>
-</style>
