@@ -29,7 +29,6 @@ Vue.use(VuePreview)
 ```jsx
 <template>
   <div>
-    <div style="height: 1000px; background-color: pink;"></div>
     <vue-preview
       :list="list"
       :thumbImageStyle="{width: '80px', height: '80px', margin: '10px'}"
